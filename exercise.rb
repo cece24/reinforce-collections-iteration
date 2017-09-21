@@ -18,16 +18,29 @@ train_80B_frequency = train_list[5][:frequency_in_minutes]
 # part 3
 train_610_direction = train_list[2][:direction]
 
-# part 4
-north_trains = train_list.select do |current_train|
-  current_train[:direction] == "north"
+# # part 4
+# north_trains = train_list.select do |current_train|
+#   current_train[:direction] == "north"
+# end
+#
+# puts "Here are the trains travelling north: #{north_trains}"
+#
+# # part 5
+# east_trains = train_list.select do |current_train|
+#   current_train[:direction] == "east"
+# end
+#
+# puts "Here are the trains travelling east: #{east_trains}"
+
+# part 6
+def trains_by_direction(list_of_trains, selected_direction)
+  list_of_trains.select do |current_train|
+    current_train[:direction] == selected_direction
+  end
 end
+
+north_trains = trains_by_direction(train_list, "north")
+east_trains = trains_by_direction(train_list, "east")
 
 puts "Here are the trains travelling north: #{north_trains}"
-
-# part 5
-east_trains = train_list.select do |current_train|
-  current_train[:direction] == "east"
-end
-
 puts "Here are the trains travelling east: #{east_trains}"
