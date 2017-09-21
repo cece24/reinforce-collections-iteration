@@ -44,3 +44,6 @@ east_trains = trains_by_direction(train_list, "east")
 
 puts "Here are the trains travelling north: #{north_trains}"
 puts "Here are the trains travelling east: #{east_trains}"
+
+# part 7
+train_list[3]["first_departure_time"] = 3
