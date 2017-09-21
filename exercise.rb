@@ -11,3 +11,9 @@ train_list = [
 
 # part 1
 train_111_direction = train_list[-1][:direction]
+
+# part 2
+train_80B_frequency = train_list[5][:frequency_in_minutes]
+
+# part 3
+train_610_direction = train_list[2][:direction]
